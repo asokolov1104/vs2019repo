@@ -17,7 +17,8 @@ int main()
     class Derived : public Base
     {
     public:
-        virtual ~Derived()      
+        //virtual ~Derived()      
+        ~Derived()
         {
             std::cout << "calling ~Derived()\n";
         }
@@ -54,4 +55,19 @@ int main()
 
     DerivedErr* DerivedObj = new DerivedErr;
     delete DerivedObj;
+
+    std::cout << "\t Study case 4\n";
+    //  Пример показывает, что достаточно определить виртуальным деструктор базового класса
+    //      чтобы вызывались деструкторы порожденных классов
+    class Derived2 : public Derived
+    {
+    public:
+        ~Derived2()
+        {
+            std::cout << "calling ~Derived2()\n";
+        }
+    };
+
+    Base *pBase = new Derived2;
+    delete pBase;
 }
