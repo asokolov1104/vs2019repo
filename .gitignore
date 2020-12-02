@@ -5,3 +5,6 @@ cnsWarmup/cnsVirtDisrt/Debug
 cnsWarmup/cnsVirtDisrt/x64
 cnsWarmup/x64
 cnsCopyConstr/x64/Debug/
+ProjectSandBox/.vs/
+ProjectSandBox/cnsAlignTask/Debug/
+ProjectSandBox/cnsAutoPtr/Debug/
